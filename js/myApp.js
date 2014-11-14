@@ -17,11 +17,26 @@ angular.module('myApp', [])
 		$scope.compute = function(a, b) {
 			return a * b;
 		};
-		
+
 		$scope.$watch('numberLimit', function(limit){
 			$scope.numbers = populateNumbers(limit);
 		});
 
 		// SET numberLimit to the initialNumberLimit OR 10
 		$scope.numberLimit = $attrs.initialNumbersLimit || 10;
+
+		// declare variables to store values
+		var activeFactorA, activeFactorB;
+
+		$scope.clearActiveFactors = function() {
+			activeFactorA = activeFactorB = null;
+		};
+		$scope.setActiveFactors = function(a, b) {
+			activeFactorA = a;
+			activeFactorB = b;
+		};
+
+		$scope.matchesFactor = function(a, b) {
+			return a === activeFactorA || b === activeFactorB;
+		};
 	});
