@@ -10,14 +10,16 @@
 	<link rel='stylesheet' href='css/style.css'>
 </head>
 <body>
-	<table ng-controller="MultiplicationCtrl">
-		<tr ng-repeat="numberA in numbers">
-			<td ng-repeat="numberB in numbers">
-				{{ numberA * numberB }}
-			</td>
-		</tr>
-	</table>
-	
+	<div ng-controller="MultiplicationCtrl" initial-number-limit="10">
+		<input type="number" ng-model="numberLimit" placeholder="Enter a number">
+		<table>
+			<tr ng-repeat="numberA in numbers">
+				<td ng-repeat="numberB in numbers">
+					{{ compute(numberA, numberB) }}
+				</td>
+			</tr>
+		</table>
+	</div>
 
 
 	<!-- Google CDN for AngularJS -->
