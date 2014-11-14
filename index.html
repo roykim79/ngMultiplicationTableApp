@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<meta charset='utf-8'>
+	<!-- <meta name="viewport" content="initial-scale=1"> -->
+    <!-- <meta name="description" content=""> -->
+	<title>Multiplication Table</title>
+	<!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/normalize.min.css" rel="stylesheet" type="text/css" /> -->
+	<!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css" rel="stylesheet" type="text/css" /> -->
+	<link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+	<table ng-controller="MultiplicationCtrl">
+		<tr ng-repeat="numberA in numbers">
+			<td ng-repeat="numberB in numbers">
+				{{ numberA * numberB }}
+			</td>
+		</tr>
+	</table>
+	
+
+
+	<!-- Google CDN for AngularJS -->
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>-->
+	<!-- Minified AngularJS file stored on local -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/myApp.js"></script>
+</body>
+</html>
