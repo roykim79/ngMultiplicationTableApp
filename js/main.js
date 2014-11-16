@@ -1,7 +1,0 @@
-
-(function(){
-
-	// INSERT CODE HERE
-	
-})();
-

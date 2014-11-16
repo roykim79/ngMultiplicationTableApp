@@ -2,23 +2,20 @@
 <html ng-app='myApp'>
 <head>
 	<meta charset='utf-8'>
-	<!-- <meta name="viewport" content="initial-scale=1"> -->
-    <!-- <meta name="description" content=""> -->
 	<title>Multiplication Table</title>
 	<!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/normalize.min.css" rel="stylesheet" type="text/css" /> -->
-	<!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css" rel="stylesheet" type="text/css" /> -->
 	<link rel='stylesheet' href='css/style.css'>
 </head>
 <body>
-
 	<!-- BEGIN DisplayCrtl -->
 	<div ng-controller="DisplayCtrl">
-		<div class="message" ng-if="content">You just clicked on {{ content }}!</div>
+		<div class="message" ng-if="content">You clicked {{ content }}!</div>
 		<div class="message" ng-if="!content">Click a number</div>
 	</div>
 	<!-- END DisplayCrtl -->
 
 	<!-- BEGIN MultiplicationCtrl -->
+	<!-- set the initial number limit -->
 	<div ng-controller="MultiplicationCtrl" initial-number-limit="10">
 		<div class="limit">Set a limit:
 			<input type="text" ng-model="numberLimit" placeholder="Enter a number">
@@ -34,13 +31,11 @@
 				</td>
 			</tr>
 		</table>
+		<pre>hello</pre>
 	</div>
 	<!-- END MultiplicationCtrl -->
 
-
-	<!-- Google CDN for AngularJS -->
 	<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>-->
-	<!-- Minified AngularJS file stored on local -->
 	<script src="js/angular.min.js"></script>
 	<script src="js/myApp.js"></script>
 </body>
